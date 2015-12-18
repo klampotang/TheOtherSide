@@ -39,6 +39,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
 extension ViewController: GMSPanoramaViewDelegate {
     func panoramaView(view: GMSPanoramaView!, error: NSError!, onMoveNearCoordinate coordinate: CLLocationCoordinate2D) {
         print("\(coordinate.latitude) \(coordinate.longitude) not available")
+        performSegueWithIdentifier("ErrorSegue", sender: nil)
+        
     }
     
 }
