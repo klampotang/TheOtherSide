@@ -14,23 +14,31 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     override func loadView() {
         let panoView = GMSPanoramaView(frame: CGRectZero)
+        panoView.delegate = self
         self.view = panoView
-        
-        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(-33.732, 150.312))
+        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(0.000, 150.312))
     }
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    /*class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+    }
+    */
+    
+    
+    
 }
+
+extension ViewController: GMSPanoramaViewDelegate {
+    func panoramaView(view: GMSPanoramaView!, error: NSError!, onMoveNearCoordinate coordinate: CLLocationCoordinate2D) {
+        print("\(coordinate.latitude) \(coordinate.longitude) not available")
+    }
+    
 }
