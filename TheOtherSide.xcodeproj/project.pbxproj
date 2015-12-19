@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2848C41C23EC04001E2B07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2848C31C23EC04001E2B07 /* CoreLocation.framework */; };
 		8A522FE81C22684800D1877A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A522FE71C22684800D1877A /* AppDelegate.swift */; };
 		8A522FEA1C22684800D1877A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A522FE91C22684800D1877A /* ViewController.swift */; };
 		8A522FED1C22684800D1877A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A522FEB1C22684800D1877A /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		5CAAC7D50412029A3F58495A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8A2848C31C23EC04001E2B07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8A522FE41C22684800D1877A /* TheOtherSide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOtherSide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A522FE71C22684800D1877A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A522FE91C22684800D1877A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2848C41C23EC04001E2B07 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 		4630CEA3B652DB60EB43CE9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A2848C31C23EC04001E2B07 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
