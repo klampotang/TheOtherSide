@@ -8,7 +8,8 @@
 
 import UIKit
 import GoogleMaps
-var oppPressed = false
+var oppLat = 0.0
+var oppLong = 0.0
 
 class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate
 
@@ -30,12 +31,12 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
     }*/
     
     @IBAction func findOppLoc(sender: UIButton) {
-        oppPressed = true
+    
         let panoView = GMSPanoramaView(frame: CGRectZero)
         panoView.delegate = self
         
         self.view = panoView
-        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(0.000, 150.312))
+        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(oppLat, oppLong))
     }
     
     @IBAction func findMyLocation(sender: UIButton) {
@@ -43,20 +44,13 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
     }
     
-    /*class ViewController: UIViewController {
-    */
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     }
-
-    
     let locationManager = CLLocationManager()
-    
-    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
             
@@ -66,9 +60,8 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
             }
             
             if placemarks!.count > 0 {
-                let pm = placemarks![0] 
+                let pm = placemarks![0]
                 self.displayLocationInfo(pm)
-                
                 self.reverseRGC(pm)
                 
                 
@@ -84,6 +77,9 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
             var newLong = currPlacemark.location!.coordinate.longitude
             newLat = newLat * -1
             newLong = newLong + 180
+            oppLat = newLat
+            oppLong = newLong
+            
             let location = CLLocation(latitude: newLat, longitude: newLong)
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
                 
