@@ -54,13 +54,43 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
             if placemarks!.count > 0 {
                 let pm = placemarks![0] 
                 self.displayLocationInfo(pm)
+                self.reverseRGC(pm)
                 
             } else {
                 print("Problem with the data received from geocoder")
             }
         })
     }
-    
+    func reverseRGC(placemark: CLPlacemark?) {
+        if let currPlacemark = placemark {
+            locationManager.stopUpdatingLocation()
+            var newLat = currPlacemark.location!.coordinate.latitude
+            var newLong = currPlacemark.location!.coordinate.longitude
+            newLat = newLat * -1
+            newLong = newLong + 180
+            let location = CLLocation(latitude: newLat, longitude: newLong)
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+                
+                //print(location)
+                if error != nil {
+                    print("Reverse geocoder failed with error" + error!.localizedDescription)
+                    return
+                }
+                
+                if placemarks!.count > 0 {
+                    let pm = placemarks![0] 
+                    print(pm.locality)
+                }
+                else {
+                    print("Problem with the data received from geocoder")
+                }
+            })
+            print("New Latitude: ")
+            print(newLat)
+            print("New Longitude: ", newLong)
+            
+        }
+    }
     func displayLocationInfo(placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
             //stop updating location to save battery life
