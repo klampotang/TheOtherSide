@@ -78,16 +78,21 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
                 }
                 
                 if placemarks!.count > 0 {
-                    let pm = placemarks![0] 
-                    print(pm.locality)
+                    let pm = placemarks![0]
+                    if(pm.locality != nil) {
+                        print(pm.locality)
+                    }
+                    else {
+                        print("Opposite is the ocean!")
+                    }
+                    
                 }
                 else {
                     print("Problem with the data received from geocoder")
                 }
             })
-            print("New Latitude: ")
-            print(newLat)
-            print("New Longitude: ", newLong)
+            print("New Latitude:", newLat)
+            print("New Longitude:", newLong)
             
         }
     }
