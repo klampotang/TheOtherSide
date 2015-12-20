@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-
+var oppPressed = false
 
 class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate
 
@@ -17,14 +17,26 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var WhereAmI: UIButton!
-    
+    @IBOutlet weak var OppositeLocation: UIButton!
+    @IBOutlet weak var opploc: UILabel!
     /*override func loadView() {
+    
         let panoView = GMSPanoramaView(frame: CGRectZero)
         panoView.delegate = self
+    
         self.view = panoView
         panoView.moveNearCoordinate(CLLocationCoordinate2DMake(0.000, 150.312))
         
     }*/
+    
+    @IBAction func findOppLoc(sender: UIButton) {
+        oppPressed = true
+        let panoView = GMSPanoramaView(frame: CGRectZero)
+        panoView.delegate = self
+        
+        self.view = panoView
+        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(0.000, 150.312))
+    }
     
     @IBAction func findMyLocation(sender: UIButton) {
         locationManager.delegate = self
@@ -33,6 +45,7 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
         locationManager.startUpdatingLocation()
         
     }
+    
     /*class ViewController: UIViewController {
     */
     override func viewDidLoad() {
@@ -42,6 +55,7 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
 
     
     let locationManager = CLLocationManager()
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
@@ -54,7 +68,9 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
             if placemarks!.count > 0 {
                 let pm = placemarks![0] 
                 self.displayLocationInfo(pm)
+                
                 self.reverseRGC(pm)
+                
                 
             } else {
                 print("Problem with the data received from geocoder")
@@ -79,11 +95,14 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
                 
                 if placemarks!.count > 0 {
                     let pm = placemarks![0]
-                    if(pm.locality != nil) {
-                        print(pm.locality)
+                    if(pm.locality == nil) {
+                        
+                        print("Opposite is the ocean!")
+                        self.opploc.text = "Opposite is ocean"
                     }
                     else {
-                        print("Opposite is the ocean!")
+                        print(pm.locality)
+                        self.opploc.text = pm.locality
                     }
                     
                 }
@@ -133,7 +152,7 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
 extension ViewController: GMSPanoramaViewDelegate {
     func panoramaView(view: GMSPanoramaView!, error: NSError!, onMoveNearCoordinate coordinate: CLLocationCoordinate2D) {
         print("\(coordinate.latitude) \(coordinate.longitude) not available")
-        //performSegueWithIdentifier("ErrorSegue", sender: nil)
+        performSegueWithIdentifier("ErrorSegue", sender: nil)
         
     }
     

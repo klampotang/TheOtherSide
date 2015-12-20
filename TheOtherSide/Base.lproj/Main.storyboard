@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59T-Rw-X9H">
-                                <rect key="frame" x="257" y="285" width="87" height="30"/>
+                                <rect key="frame" x="257" y="70" width="87" height="30"/>
                                 <color key="backgroundColor" red="0.84480443310967324" green="1" blue="0.45342119467525199" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Where Am I?"/>
                                 <connections>
@@ -26,12 +26,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-X8-FID">
-                                <rect key="frame" x="200" y="350" width="200" height="200"/>
+                                <rect key="frame" x="200" y="120" width="200" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-y7-o4D">
-                                        <rect key="frame" x="65" y="25" width="70" height="21"/>
+                                        <rect key="frame" x="-5" y="25" width="210" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="7Ob-3X-1ff"/>
+                                            <constraint firstAttribute="width" constant="210" id="7Ob-3X-1ff"/>
                                             <constraint firstAttribute="height" constant="21" id="F7b-sj-4HC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -67,19 +67,59 @@
                                     <constraint firstItem="Jd0-y7-o4D" firstAttribute="centerX" secondItem="dTb-X8-FID" secondAttribute="centerX" id="pYv-me-AdK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-GQ-4hg">
+                                <rect key="frame" x="200" y="345" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.69587018241632814" green="0.84715357424374715" blue="0.9317787247474747" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AbN-2K-Lul"/>
+                                    <constraint firstAttribute="height" constant="30" id="eG1-kI-XTX"/>
+                                </constraints>
+                                <state key="normal" title="Take me to the other side"/>
+                                <connections>
+                                    <action selector="findOppLoc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dx-Rp-9sL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjP-jG-egS">
+                                <rect key="frame" x="175" y="395" width="250" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opposite location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPU-Ed-YsA">
+                                        <rect key="frame" x="55" y="39" width="140" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="1sg-dh-Mam"/>
+                                            <constraint firstAttribute="height" constant="21" id="EZ7-FR-qKK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69587018239999998" green="0.84715357420000004" blue="0.93177872470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerX" secondItem="LjP-jG-egS" secondAttribute="centerX" id="8eg-p1-0ln"/>
+                                    <constraint firstAttribute="width" constant="250" id="AWK-Ek-jYq"/>
+                                    <constraint firstAttribute="height" constant="98" id="HlV-zm-BOx"/>
+                                    <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerY" secondItem="LjP-jG-egS" secondAttribute="centerY" id="WFb-AZ-GVp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dTb-X8-FID" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="350" id="037-Hb-yZ7"/>
-                            <constraint firstItem="59T-Rw-X9H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Etj-Is-aP0"/>
-                            <constraint firstItem="59T-Rw-X9H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yet-kT-t0G"/>
+                            <constraint firstItem="dTb-X8-FID" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="120" id="037-Hb-yZ7"/>
+                            <constraint firstItem="YuE-GQ-4hg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I85-jZ-RDZ"/>
+                            <constraint firstItem="LjP-jG-egS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RsC-bG-TzT"/>
+                            <constraint firstItem="59T-Rw-X9H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="XDb-aG-3AN"/>
+                            <constraint firstItem="YuE-GQ-4hg" firstAttribute="top" secondItem="dTb-X8-FID" secondAttribute="bottom" constant="25" id="h1j-uQ-6R4"/>
+                            <constraint firstItem="59T-Rw-X9H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCk-s7-gQ8"/>
+                            <constraint firstItem="LjP-jG-egS" firstAttribute="top" secondItem="YuE-GQ-4hg" secondAttribute="bottom" constant="20" id="v6t-eO-CW5"/>
                             <constraint firstItem="dTb-X8-FID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZm-IB-yAR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="OppositeLocation" destination="YuE-GQ-4hg" id="mIu-1Q-4Hd"/>
                         <outlet property="WhereAmI" destination="59T-Rw-X9H" id="gcz-AL-FE7"/>
                         <outlet property="city" destination="Jd0-y7-o4D" id="LWY-sd-tmn"/>
                         <outlet property="country" destination="YHj-Zx-Lvc" id="8p0-Pb-rFY"/>
+                        <outlet property="opploc" destination="rPU-Ed-YsA" id="RIo-EL-HKN"/>
                         <outlet property="state" destination="Lz4-QU-ggW" id="wb2-cS-hSw"/>
                         <segue destination="wK3-t1-uqA" kind="show" identifier="ErrorSegue" id="2xm-yM-Ieh"/>
                     </connections>
