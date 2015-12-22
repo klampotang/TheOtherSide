@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -20,14 +20,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC_1027_1024" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-ax-4r6">
+                                <rect key="frame" x="213" y="285" width="175" height="30"/>
+                                <state key="normal" title="Use My Current Location!">
+                                    <color key="titleColor" red="1" green="0.033116476744631362" blue="0.077751325763233958" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="f6L-sS-na5"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The Other Side" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rDA-L6-aiP">
-                                <rect key="frame" x="198" y="33" width="240" height="128"/>
+                                <rect key="frame" x="180" y="33" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzU-ax-4r6" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="gHR-I8-UbI"/>
+                            <constraint firstItem="fzU-ax-4r6" firstAttribute="centerY" secondItem="8fc-Vk-DlY" secondAttribute="centerY" id="jTO-EI-ucB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdQ-Nu-1ZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,13 +143,22 @@
                                     <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerY" secondItem="LjP-jG-egS" secondAttribute="centerY" id="WFb-AZ-GVp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nai-gs-jhG">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="zZ2-cT-WjC" kind="presentation" id="FIq-8Z-pRO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dTb-X8-FID" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="120" id="037-Hb-yZ7"/>
                             <constraint firstItem="YuE-GQ-4hg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I85-jZ-RDZ"/>
+                            <constraint firstItem="nai-gs-jhG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="LoR-QZ-vHJ"/>
                             <constraint firstItem="LjP-jG-egS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RsC-bG-TzT"/>
                             <constraint firstItem="59T-Rw-X9H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="XDb-aG-3AN"/>
+                            <constraint firstItem="nai-gs-jhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="f8g-yc-QJu"/>
                             <constraint firstItem="YuE-GQ-4hg" firstAttribute="top" secondItem="dTb-X8-FID" secondAttribute="bottom" constant="25" id="h1j-uQ-6R4"/>
                             <constraint firstItem="59T-Rw-X9H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCk-s7-gQ8"/>
                             <constraint firstItem="LjP-jG-egS" firstAttribute="top" secondItem="YuE-GQ-4hg" secondAttribute="bottom" constant="20" id="v6t-eO-CW5"/>
