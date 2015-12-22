@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -101,11 +101,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLJ-EQ-Qxt">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="zZ2-cT-WjC" kind="modal" id="SOT-VE-5nG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uOx-IT-8SB" firstAttribute="centerX" secondItem="Oog-5y-aBc" secondAttribute="centerX" id="Rff-Xe-sPP"/>
                             <constraint firstItem="uOx-IT-8SB" firstAttribute="centerY" secondItem="Oog-5y-aBc" secondAttribute="centerY" id="ecY-iP-9bb"/>
+                            <constraint firstItem="kLJ-EQ-Qxt" firstAttribute="top" secondItem="f7n-g2-RTW" secondAttribute="bottom" constant="10" id="t92-kA-MQE"/>
+                            <constraint firstItem="kLJ-EQ-Qxt" firstAttribute="leading" secondItem="Oog-5y-aBc" secondAttribute="leading" constant="20" id="zh0-jv-Vp5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -316,7 +325,7 @@
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SOT-VE-5nG"/>
         <segue reference="f6L-sS-na5"/>
-        <segue reference="nvM-yL-xUv"/>
     </inferredMetricsTieBreakers>
 </document>
