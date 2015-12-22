@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -24,21 +24,20 @@
                                     <constraint firstAttribute="width" constant="1000" id="R6F-tX-KJq"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-ax-4r6">
-                                <rect key="frame" x="213" y="285" width="175" height="30"/>
-                                <state key="normal" title="Use My Current Location!">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-ax-4r6" userLabel="CurrLocButton">
+                                <rect key="frame" x="-5" y="125" width="180" height="350"/>
+                                <accessibility key="accessibilityConfiguration" label="CurrLocButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="2D4-hD-85h"/>
+                                    <constraint firstAttribute="height" constant="350" id="D8i-R0-c4z"/>
+                                </constraints>
+                                <state key="normal" image="CurrLocButton">
                                     <color key="titleColor" red="1" green="0.033116476744631362" blue="0.077751325763233958" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="f6L-sS-na5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="TheOtherSideText" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-gA-K1h">
-                                <rect key="frame" x="147" y="-67" width="306" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="dkl-o8-Mh3"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheOtherSideText" translatesAutoresizingMaskIntoConstraints="NO" id="4zJ-GJ-uiF">
                                 <rect key="frame" x="147" y="70" width="306" height="396"/>
                             </imageView>
@@ -47,9 +46,9 @@
                         <constraints>
                             <constraint firstItem="gga-Te-TtK" firstAttribute="top" secondItem="8fc-Vk-DlY" secondAttribute="topMargin" id="Deb-Q5-f77"/>
                             <constraint firstItem="YFc-9l-63R" firstAttribute="top" secondItem="gga-Te-TtK" secondAttribute="bottom" id="E4T-N3-CAs"/>
+                            <constraint firstItem="fzU-ax-4r6" firstAttribute="leading" secondItem="8fc-Vk-DlY" secondAttribute="leadingMargin" constant="-25" id="EdW-op-Zqy"/>
                             <constraint firstItem="4zJ-GJ-uiF" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="e5P-ca-Jlb"/>
                             <constraint firstItem="4zJ-GJ-uiF" firstAttribute="top" secondItem="uyh-lf-2OY" secondAttribute="bottom" constant="50" id="f9P-q2-LGE"/>
-                            <constraint firstItem="fzU-ax-4r6" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="gHR-I8-UbI"/>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="centerY" secondItem="8fc-Vk-DlY" secondAttribute="centerY" id="jTO-EI-ucB"/>
                             <constraint firstItem="gga-Te-TtK" firstAttribute="leading" secondItem="8fc-Vk-DlY" secondAttribute="leadingMargin" id="lu6-z2-hxq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gga-Te-TtK" secondAttribute="trailing" id="mZD-Lu-mLy"/>
@@ -249,6 +248,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CurrLocButton" width="306" height="396"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
