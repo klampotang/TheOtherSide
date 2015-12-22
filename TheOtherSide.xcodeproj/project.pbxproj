@@ -15,6 +15,7 @@
 		8A522FF21C22684800D1877A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A522FF01C22684800D1877A /* LaunchScreen.storyboard */; };
 		8A522FFD1C22684800D1877A /* TheOtherSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A522FFC1C22684800D1877A /* TheOtherSideTests.swift */; };
 		8A5230081C22684800D1877A /* TheOtherSideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5230071C22684800D1877A /* TheOtherSideUITests.swift */; };
+		B9A18C9BCC816B6137B0F900 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72C3C58B2368C9AC3CE4C4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8A5230071C22684800D1877A /* TheOtherSideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOtherSideUITests.swift; sourceTree = "<group>"; };
 		8A5230091C22684800D1877A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9768DD0E09DCB01FDB16367F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FD72C3C58B2368C9AC3CE4C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2848C41C23EC04001E2B07 /* CoreLocation.framework in Frameworks */,
+				B9A18C9BCC816B6137B0F900 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8A2848C31C23EC04001E2B07 /* CoreLocation.framework */,
+				FD72C3C58B2368C9AC3CE4C4 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 				TargetAttributes = {
 					8A522FE31C22684700D1877A = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = CKF73J7D4M;
 					};
 					8A522FF71C22684800D1877A = {
 						CreatedOnToolsVersion = 7.0;
@@ -476,10 +481,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.KW.TheOtherSide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KW.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -489,10 +496,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.KW.TheOtherSide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KW.Earth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
