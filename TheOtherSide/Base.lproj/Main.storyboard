@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-ax-4r6">
@@ -29,26 +29,15 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="f6L-sS-na5"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-lb-jsT">
-                                <rect key="frame" x="207" y="341" width="187" height="30"/>
-                                <state key="normal" title="Input My Own Coordinates!">
-                                    <color key="titleColor" red="1" green="0.025368490547227229" blue="0.033915462902705973" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The Other Side" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rDA-L6-aiP">
-                                <rect key="frame" x="180" y="33" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-=======
->>>>>>> 4369889fa74e39b161d9ddcf8b1468025a664361
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gga-Te-TtK" firstAttribute="top" secondItem="8fc-Vk-DlY" secondAttribute="topMargin" id="Deb-Q5-f77"/>
+                            <constraint firstItem="YFc-9l-63R" firstAttribute="top" secondItem="gga-Te-TtK" secondAttribute="bottom" id="E4T-N3-CAs"/>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="gHR-I8-UbI"/>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="centerY" secondItem="8fc-Vk-DlY" secondAttribute="centerY" id="jTO-EI-ucB"/>
+                            <constraint firstItem="gga-Te-TtK" firstAttribute="leading" secondItem="8fc-Vk-DlY" secondAttribute="leadingMargin" id="lu6-z2-hxq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gga-Te-TtK" secondAttribute="trailing" id="mZD-Lu-mLy"/>
                             <constraint firstItem="gga-Te-TtK" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="q3t-3a-7cM"/>
                         </constraints>
                     </view>
@@ -236,6 +225,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="384" height="512"/>
+        <image name="bg" width="2434" height="3626"/>
     </resources>
 </document>
