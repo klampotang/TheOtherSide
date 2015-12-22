@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC_1027_1024" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-ax-4r6">
@@ -29,6 +29,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="f6L-sS-na5"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-lb-jsT">
                                 <rect key="frame" x="207" y="341" width="187" height="30"/>
                                 <state key="normal" title="Input My Own Coordinates!">
@@ -41,11 +42,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+=======
+>>>>>>> 4369889fa74e39b161d9ddcf8b1468025a664361
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="gHR-I8-UbI"/>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="centerY" secondItem="8fc-Vk-DlY" secondAttribute="centerY" id="jTO-EI-ucB"/>
+                            <constraint firstItem="gga-Te-TtK" firstAttribute="centerX" secondItem="8fc-Vk-DlY" secondAttribute="centerX" id="q3t-3a-7cM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -232,6 +236,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DSC_1027_1024" width="726" height="1082"/>
+        <image name="bg" width="363" height="541"/>
     </resources>
 </document>
