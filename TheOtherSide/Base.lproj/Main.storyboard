@@ -17,10 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rme-PP-HrS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC_1027_1024" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Te-TtK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.95712608379999997" blue="0.29101199579999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -198,4 +197,7 @@
             <point key="canvasLocation" x="944" y="181"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DSC_1027_1024" width="726" height="1082"/>
+    </resources>
 </document>
