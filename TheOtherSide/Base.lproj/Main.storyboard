@@ -29,6 +29,21 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="f6L-sS-na5"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-lb-jsT">
+                                <rect key="frame" x="207" y="341" width="187" height="30"/>
+                                <state key="normal" title="Input My Own Coordinates!">
+                                    <color key="titleColor" red="1" green="0.025368490547227229" blue="0.033915462902705973" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The Other Side" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rDA-L6-aiP">
+                                <rect key="frame" x="180" y="33" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+=======
+>>>>>>> 4369889fa74e39b161d9ddcf8b1468025a664361
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
