@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -41,9 +41,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheOtherSideText" translatesAutoresizingMaskIntoConstraints="NO" id="4zJ-GJ-uiF">
                                 <rect key="frame" x="147" y="70" width="306" height="396"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFt-3t-lVF">
-                                <rect key="frame" x="277" y="253" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFt-3t-lVF" userLabel="EnterLocButton">
+                                <rect key="frame" x="429" y="125" width="180" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="L1h-kS-jNC"/>
+                                    <constraint firstAttribute="height" constant="350" id="hss-lM-1qP"/>
+                                </constraints>
+                                <state key="normal" image="EnterLocButton">
                                     <color key="titleColor" red="0.070414897900911266" green="1" blue="0.038345602892471575" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -53,6 +57,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eFt-3t-lVF" firstAttribute="centerY" secondItem="8fc-Vk-DlY" secondAttribute="centerY" id="02a-ML-iva"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eFt-3t-lVF" secondAttribute="trailing" constant="-29" id="BaJ-wE-jqv"/>
                             <constraint firstItem="gga-Te-TtK" firstAttribute="top" secondItem="8fc-Vk-DlY" secondAttribute="topMargin" id="Deb-Q5-f77"/>
                             <constraint firstItem="YFc-9l-63R" firstAttribute="top" secondItem="gga-Te-TtK" secondAttribute="bottom" id="E4T-N3-CAs"/>
                             <constraint firstItem="fzU-ax-4r6" firstAttribute="leading" secondItem="8fc-Vk-DlY" secondAttribute="leadingMargin" constant="-25" id="EdW-op-Zqy"/>
@@ -305,6 +311,7 @@
     </scenes>
     <resources>
         <image name="CurrLocButton" width="306" height="396"/>
+        <image name="EnterLocButton" width="306" height="396"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
