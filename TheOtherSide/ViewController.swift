@@ -20,6 +20,10 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
     @IBOutlet weak var WhereAmI: UIButton!
     @IBOutlet weak var OppositeLocation: UIButton!
     @IBOutlet weak var opploc: UILabel!
+    @IBOutlet weak var userText: UITextField!
+    
+    
+    
     /*override func loadView() {
     
         let panoView = GMSPanoramaView(frame: CGRectZero)
