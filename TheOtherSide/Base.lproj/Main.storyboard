@@ -87,48 +87,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-uI-HEj" userLabel="userText">
-                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-uI-HEj" userLabel="userText">
+                                <rect key="frame" x="135" y="175" width="97" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.079419953942946098" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="OLs-Lg-Ads"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="inputLat:" destination="Kdx-kc-GzV" eventType="editingDidEnd" id="Ibw-LY-Yzg"/>
-                                    <action selector="inputText:" destination="Kdx-kc-GzV" eventType="editingDidEnd" id="WK3-ce-Mto"/>
-                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-e2-mLG">
-                                <rect key="frame" x="252" y="323" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-e2-mLG">
+                                <rect key="frame" x="147" y="255" width="97" height="30"/>
                                 <color key="backgroundColor" red="0.15083945276644828" green="1" blue="0.28153224207849015" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="inputLong:" destination="Kdx-kc-GzV" eventType="editingDidEnd" id="A1o-Cq-Mfx"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPK-8o-HtM">
-                                <rect key="frame" x="277" y="361" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPK-8o-HtM">
+                                <rect key="frame" x="192" y="344" width="46" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <segue destination="arz-Jl-7TN" kind="presentation" id="QWR-Fy-g9d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-IW-c7e">
+                                <rect key="frame" x="172" y="123" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zZ2-cT-WjC" kind="modal" id="hnL-Qe-3f7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="SPK-8o-HtM" firstAttribute="leading" secondItem="vTH-B2-mkI" secondAttribute="leadingMargin" constant="257" id="0Un-iW-WbV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SPK-8o-HtM" secondAttribute="trailing" constant="257" id="BI0-FE-4kV"/>
-                            <constraint firstItem="GWv-uI-HEj" firstAttribute="centerX" secondItem="vTH-B2-mkI" secondAttribute="centerX" id="H62-On-aZn"/>
-                            <constraint firstItem="SPK-8o-HtM" firstAttribute="top" secondItem="9Ef-e2-mLG" secondAttribute="bottom" constant="8" id="aUI-Ra-0hK"/>
-                            <constraint firstItem="GWv-uI-HEj" firstAttribute="centerY" secondItem="vTH-B2-mkI" secondAttribute="centerY" id="c93-pm-eoK"/>
-                            <constraint firstItem="9Ef-e2-mLG" firstAttribute="leading" secondItem="vTH-B2-mkI" secondAttribute="leadingMargin" constant="232" id="gun-Ed-mun"/>
-                            <constraint firstItem="9Ef-e2-mLG" firstAttribute="top" secondItem="GWv-uI-HEj" secondAttribute="bottom" constant="8" id="hq5-NR-ap1"/>
-                            <constraint firstItem="z9a-0Y-q28" firstAttribute="top" secondItem="SPK-8o-HtM" secondAttribute="bottom" constant="209" id="iaF-xL-NkS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Ef-e2-mLG" secondAttribute="trailing" constant="231" id="ymZ-PC-amF"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="userLat" destination="GWv-uI-HEj" id="cRg-Dy-thW"/>
@@ -358,9 +344,6 @@
                                 <rect key="frame" x="257" y="70" width="87" height="30"/>
                                 <color key="backgroundColor" red="0.84480443309999997" green="1" blue="0.45342119469999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Where Am I?"/>
-                                <connections>
-                                    <action selector="findMyLocation:" destination="arz-Jl-7TN" eventType="touchUpInside" id="jLX-mv-YN5"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pf0-Aq-JIK">
                                 <rect key="frame" x="200" y="120" width="200" height="200"/>
@@ -487,16 +470,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="OppositeLocation" destination="jIN-th-N21" id="6h8-Yt-13b"/>
                         <outlet property="OtherSide" destination="jIN-th-N21" id="lti-8G-2n8"/>
                         <outlet property="WhereAmI" destination="1kf-4Q-PyR" id="YII-rg-3Sp"/>
                         <outlet property="city" destination="DLr-YD-iel" id="Jca-Ck-Fj3"/>
                         <outlet property="country" destination="DTH-a1-kgc" id="e6G-Q6-9Hr"/>
                         <outlet property="oppCity" destination="agw-DA-eIb" id="rBB-1C-ASm"/>
                         <outlet property="oppCountry" destination="fag-q6-XNw" id="C4X-a2-vK7"/>
-                        <outlet property="oppLoc" destination="agw-DA-eIb" id="ECk-CC-1m7"/>
                         <outlet property="oppState" destination="xHl-W5-IXz" id="c6e-vu-QkH"/>
-                        <outlet property="opploc" destination="agw-DA-eIb" id="PgL-zv-QpM"/>
                         <outlet property="state" destination="ORs-Dm-SmR" id="Aei-aX-I3O"/>
                     </connections>
                 </viewController>
@@ -514,8 +494,8 @@
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f6L-sS-na5"/>
-        <segue reference="u6w-0w-KEl"/>
+        <segue reference="Xop-8K-z4P"/>
+        <segue reference="hnL-Qe-3f7"/>
         <segue reference="tlB-jd-moz"/>
     </inferredMetricsTieBreakers>
 </document>

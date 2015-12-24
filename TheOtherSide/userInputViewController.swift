@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class userInputViewController: UIViewController {
+class userInputViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userLat: UITextField!
 
@@ -19,18 +19,27 @@ class userInputViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.userLat.delegate = self;
+        self.userLong.delegate = self;
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject!) {
         let DestViewController : userLocation = segue.destinationViewController as! userLocation
-       
+        
         DestViewController.lat = Double(userLat.text!)!
+        DestViewController.long = Double(userLong.text!)!
         
     }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 
