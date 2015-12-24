@@ -24,6 +24,7 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
     
     
     
+    
     /*override func loadView() {
     
         let panoView = GMSPanoramaView(frame: CGRectZero)

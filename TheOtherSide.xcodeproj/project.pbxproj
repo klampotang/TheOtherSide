@@ -14,6 +14,8 @@
 		8A522FF21C22684800D1877A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A522FF01C22684800D1877A /* LaunchScreen.storyboard */; };
 		8A522FFD1C22684800D1877A /* TheOtherSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A522FFC1C22684800D1877A /* TheOtherSideTests.swift */; };
 		8A5230081C22684800D1877A /* TheOtherSideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5230071C22684800D1877A /* TheOtherSideUITests.swift */; };
+		B96D506E1C2B4DAB00F4CF7E /* userInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D506D1C2B4DAB00F4CF7E /* userInputViewController.swift */; };
+		B96D50721C2B7B4A00F4CF7E /* userLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D50711C2B7B4A00F4CF7E /* userLocation.swift */; };
 		B9A129BC1C2A400C005A7485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A129BB1C2A400C005A7485 /* ViewController.swift */; };
 		B9A18C9BCC816B6137B0F900 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72C3C58B2368C9AC3CE4C4 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		8A5230071C22684800D1877A /* TheOtherSideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOtherSideUITests.swift; sourceTree = "<group>"; };
 		8A5230091C22684800D1877A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9768DD0E09DCB01FDB16367F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B96D506D1C2B4DAB00F4CF7E /* userInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInputViewController.swift; sourceTree = "<group>"; };
+		B96D50711C2B7B4A00F4CF7E /* userLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userLocation.swift; sourceTree = "<group>"; };
 		B9A129BB1C2A400C005A7485 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD72C3C58B2368C9AC3CE4C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				B9A129BB1C2A400C005A7485 /* ViewController.swift */,
+				B96D506D1C2B4DAB00F4CF7E /* userInputViewController.swift */,
+				B96D50711C2B7B4A00F4CF7E /* userLocation.swift */,
 				8A522FE71C22684800D1877A /* AppDelegate.swift */,
 				8A522FEB1C22684800D1877A /* Main.storyboard */,
 				8A522FEE1C22684800D1877A /* Assets.xcassets */,
@@ -224,7 +230,7 @@
 				TargetAttributes = {
 					8A522FE31C22684700D1877A = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F4P428X9U6;
+						DevelopmentTeam = CKF73J7D4M;
 					};
 					8A522FF71C22684800D1877A = {
 						CreatedOnToolsVersion = 7.0;
@@ -338,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96D506E1C2B4DAB00F4CF7E /* userInputViewController.swift in Sources */,
+				B96D50721C2B7B4A00F4CF7E /* userLocation.swift in Sources */,
 				B9A129BC1C2A400C005A7485 /* ViewController.swift in Sources */,
 				8A522FE81C22684800D1877A /* AppDelegate.swift in Sources */,
 			);
@@ -484,7 +492,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheheheheheh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -499,7 +507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheheheheheh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
