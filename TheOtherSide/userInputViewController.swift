@@ -15,12 +15,15 @@ class userInputViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userLong: UITextField!
     
+    @IBOutlet weak var done: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.userLat.delegate = self;
         self.userLong.delegate = self;
+    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject!) {

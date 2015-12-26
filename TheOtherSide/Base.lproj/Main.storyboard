@@ -110,13 +110,14 @@
                                 <rect key="frame" x="172" y="123" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="zZ2-cT-WjC" kind="modal" id="hnL-Qe-3f7"/>
+                                    <segue destination="zZ2-cT-WjC" kind="modal" id="Nyq-yh-gW9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="done" destination="SPK-8o-HtM" id="wyh-Fb-32Q"/>
                         <outlet property="userLat" destination="GWv-uI-HEj" id="cRg-Dy-thW"/>
                         <outlet property="userLong" destination="9Ef-e2-mLG" id="lHZ-dw-Fcl"/>
                     </connections>
@@ -494,8 +495,8 @@
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xop-8K-z4P"/>
-        <segue reference="hnL-Qe-3f7"/>
-        <segue reference="tlB-jd-moz"/>
+        <segue reference="f6L-sS-na5"/>
+        <segue reference="Nyq-yh-gW9"/>
+        <segue reference="hKd-w9-mJq"/>
     </inferredMetricsTieBreakers>
 </document>
