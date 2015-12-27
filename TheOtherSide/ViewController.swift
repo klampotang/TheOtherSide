@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 var oppLat = 0.0
 var oppLong = 0.0
+var oppCity = ""
 
 class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate
 
@@ -20,11 +21,6 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
     @IBOutlet weak var WhereAmI: UIButton!
     @IBOutlet weak var OppositeLocation: UIButton!
     @IBOutlet weak var opploc: UILabel!
-    
-    
-    
-    
-    
     /*override func loadView() {
     
         let panoView = GMSPanoramaView(frame: CGRectZero)
@@ -34,14 +30,53 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
         panoView.moveNearCoordinate(CLLocationCoordinate2DMake(0.000, 150.312))
         
     }*/
+    func load_image(urlString:String)
+    {
+        let imgURL: NSURL = NSURL(string: urlString)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request){
+            (data, response, error) -> Void in
+            
+            if (error == nil && data != nil)
+            {
+                func display_image()
+                {
+                    self.searchImage.image = UIImage(data: data!)
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), display_image)
+            }
+            
+        }
+        
+        task.resume()
+    }
+
     
     @IBAction func findOppLoc(sender: UIButton) {
-    
+    /*
         let panoView = GMSPanoramaView(frame: CGRectZero)
         panoView.delegate = self
         
         self.view = panoView
         panoView.moveNearCoordinate(CLLocationCoordinate2DMake(oppLat, oppLong))
+    */
+        DataManager.getTopAppsDataFromCSE { (SearchData) -> Void in
+            let json = JSON(data: SearchData)
+            if let title = json["items"][0]["title"].string {
+                print("NSURLSession: \(title)")
+            }
+            if let imageURL = json["items"][0]["pagemap"]["cse_image"][0]["src"].string
+            {
+                print(imageURL)
+                self.load_image(imageURL)
+            }
+            // More soon...
+        }
+
+
     }
     
     @IBAction func findMyLocation(sender: UIButton) {
@@ -99,11 +134,13 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
                     if(pm.locality == nil) {
                         
                         print("Opposite is the ocean!")
+                        oppCity = "ocean"
                         self.opploc.text = "Opposite is ocean"
                     }
                     else {
                         print(pm.locality)
                         self.opploc.text = pm.locality
+                        oppCity = pm.locality!
                     }
                     
                 }
