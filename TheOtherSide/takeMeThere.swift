@@ -46,12 +46,9 @@ class takeMeThere: UIViewController {
             }
             if let imageURL = json["items"][0]["pagemap"]["cse_image"][0]["src"].string
             {
-                print(imageURL)
                 load_image(imageURL)
             }
-            // More soon...
         }
-        
         
     }
     
