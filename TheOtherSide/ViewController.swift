@@ -11,6 +11,7 @@ import GoogleMaps
 var oppLat = 0.0
 var oppLong = 0.0
 
+//create a global-like variable for the opposite city
 struct MyVariables {
    static var oppCity = "SomeString"
 }
