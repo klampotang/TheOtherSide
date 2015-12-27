@@ -197,7 +197,7 @@
                                 </constraints>
                                 <state key="normal" title="Take me to the other side"/>
                                 <connections>
-                                    <action selector="findOppLoc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dx-Rp-9sL"/>
+                                    <segue destination="BaW-98-9gq" kind="presentation" id="HiF-Gn-gTd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjP-jG-egS">
@@ -249,85 +249,63 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="OppositeLocation" destination="YuE-GQ-4hg" id="mIu-1Q-4Hd"/>
                         <outlet property="WhereAmI" destination="59T-Rw-X9H" id="gcz-AL-FE7"/>
                         <outlet property="city" destination="Jd0-y7-o4D" id="LWY-sd-tmn"/>
                         <outlet property="country" destination="YHj-Zx-Lvc" id="8p0-Pb-rFY"/>
                         <outlet property="opploc" destination="rPU-Ed-YsA" id="RIo-EL-HKN"/>
                         <outlet property="state" destination="Lz4-QU-ggW" id="wb2-cS-hSw"/>
-                        <segue destination="wK3-t1-uqA" kind="show" identifier="ErrorSegue" id="2xm-yM-Ieh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85" y="727"/>
         </scene>
-        <!--Error-->
-        <scene sceneID="zvN-1S-gyA">
+        <!--TakeMeThere-->
+        <scene sceneID="djf-22-Zje">
             <objects>
-                <viewController title="Error" id="wK3-t1-uqA" sceneMemberID="viewController">
+                <viewController id="BaW-98-9gq" userLabel="TakeMeThere" customClass="takeMeThere" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HoH-0u-llQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="SJt-Zt-z6P"/>
+                        <viewControllerLayoutGuide type="top" id="QBL-zQ-DHA"/>
+                        <viewControllerLayoutGuide type="bottom" id="LuY-B6-1Ge"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="syS-m6-Bjg">
+                    <view key="view" contentMode="scaleToFill" id="5RP-Mr-uNo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-oi-4uW">
-                                <rect key="frame" x="200" y="275" width="200" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Invalid Location" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rty-i4-jSv">
-                                        <rect key="frame" x="25" y="10" width="150" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="BD4-Ht-We6"/>
-                                            <constraint firstAttribute="height" constant="30" id="gxg-OG-DO0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YSf-4N-mBZ" userLabel="CityView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.87450987100601196" blue="0.77647066116333008" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstItem="rty-i4-jSv" firstAttribute="centerX" secondItem="QGc-oi-4uW" secondAttribute="centerX" id="HOb-aJ-Uci"/>
-                                    <constraint firstAttribute="height" constant="50" id="P3Z-6P-NYx"/>
-                                    <constraint firstAttribute="width" constant="200" id="XpV-wR-w3U"/>
-                                    <constraint firstItem="rty-i4-jSv" firstAttribute="centerY" secondItem="QGc-oi-4uW" secondAttribute="centerY" id="nEK-AN-3fe"/>
+                                    <constraint firstAttribute="width" constant="300" id="L4u-lX-cX7"/>
+                                    <constraint firstAttribute="height" constant="300" id="gMG-YM-HfB"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQs-U4-QTL" userLabel="BackButton">
-                                <rect key="frame" x="10" y="29" width="50" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityThing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-Ic-CX2">
+                                <rect key="frame" x="150" y="81" width="300" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="XXl-bu-l0T"/>
-                                    <constraint firstAttribute="height" constant="50" id="adl-7C-GSq"/>
+                                    <constraint firstAttribute="height" constant="42" id="OoD-Qw-5Hc"/>
+                                    <constraint firstAttribute="width" constant="300" id="VlM-Yy-dsa"/>
                                 </constraints>
-                                <state key="normal" image="BackButton"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="Xop-8K-z4P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIW-GB-rEt" userLabel="HomeButton">
-                                <rect key="frame" x="537" y="25" width="58" height="55"/>
-                                <state key="normal" image="Home"/>
-                                <connections>
-                                    <segue destination="zZ2-cT-WjC" kind="modal" id="BND-t7-dQL"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QGc-oi-4uW" firstAttribute="centerY" secondItem="syS-m6-Bjg" secondAttribute="centerY" id="aXu-Zr-5mz"/>
-                            <constraint firstItem="KQs-U4-QTL" firstAttribute="leading" secondItem="syS-m6-Bjg" secondAttribute="leading" constant="10" id="b4f-kT-3KD"/>
-                            <constraint firstItem="KQs-U4-QTL" firstAttribute="top" secondItem="HoH-0u-llQ" secondAttribute="bottom" constant="9" id="dfw-Gj-xIN"/>
-                            <constraint firstAttribute="trailing" secondItem="ZIW-GB-rEt" secondAttribute="trailing" constant="5" id="fT1-Ga-71k"/>
-                            <constraint firstItem="QGc-oi-4uW" firstAttribute="centerX" secondItem="syS-m6-Bjg" secondAttribute="centerX" id="lQ9-fa-px4"/>
-                            <constraint firstItem="ZIW-GB-rEt" firstAttribute="top" secondItem="HoH-0u-llQ" secondAttribute="bottom" constant="5" id="sIL-nR-OLu"/>
+                            <constraint firstItem="YSf-4N-mBZ" firstAttribute="centerY" secondItem="5RP-Mr-uNo" secondAttribute="centerY" id="H90-ia-TCm"/>
+                            <constraint firstItem="YSf-4N-mBZ" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="INX-7s-3gg"/>
+                            <constraint firstItem="YSf-4N-mBZ" firstAttribute="top" secondItem="X1b-Ic-CX2" secondAttribute="bottom" constant="27" id="KDZ-43-ag4"/>
+                            <constraint firstItem="X1b-Ic-CX2" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="Mx8-Or-L7J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchImage" destination="YSf-4N-mBZ" id="pDE-qg-YAI"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sx-we-5uY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFs-pu-pFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="213"/>
+            <point key="canvasLocation" x="754" y="740"/>
         </scene>
         <!--Current Location2 -->
         <scene sceneID="EHb-5x-tvf">
@@ -490,13 +468,11 @@
         <image name="BackButton" width="102" height="77"/>
         <image name="CurrLocButton" width="306" height="396"/>
         <image name="EnterLocButton" width="306" height="396"/>
-        <image name="Home" width="58" height="55"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Nyq-yh-gW9"/>
         <segue reference="tlB-jd-moz"/>
-        <segue reference="f6L-sS-na5"/>
-        <segue reference="u6w-0w-KEl"/>
     </inferredMetricsTieBreakers>
 </document>
