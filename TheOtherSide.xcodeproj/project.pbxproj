@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A23DCE21C2FA04800219930 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23DCE11C2FA04800219930 /* DataManager.swift */; };
+		8A23DCE41C2FA16D00219930 /* SwiftyJSON1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23DCE31C2FA16D00219930 /* SwiftyJSON1.swift */; };
 		8A2848C41C23EC04001E2B07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2848C31C23EC04001E2B07 /* CoreLocation.framework */; };
 		8A522FE81C22684800D1877A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A522FE71C22684800D1877A /* AppDelegate.swift */; };
 		8A522FED1C22684800D1877A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A522FEB1C22684800D1877A /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		5CAAC7D50412029A3F58495A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8A23DCE11C2FA04800219930 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8A23DCE31C2FA16D00219930 /* SwiftyJSON1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON1.swift; sourceTree = "<group>"; };
 		8A2848C31C23EC04001E2B07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8A522FE41C22684800D1877A /* TheOtherSide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOtherSide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A522FE71C22684800D1877A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				B9A129BB1C2A400C005A7485 /* ViewController.swift */,
+				8A23DCE11C2FA04800219930 /* DataManager.swift */,
 				B96D506D1C2B4DAB00F4CF7E /* userInputViewController.swift */,
+				8A23DCE31C2FA16D00219930 /* SwiftyJSON1.swift */,
 				B96D50711C2B7B4A00F4CF7E /* userLocation.swift */,
 				8A522FE71C22684800D1877A /* AppDelegate.swift */,
 				8A522FEB1C22684800D1877A /* Main.storyboard */,
@@ -230,7 +236,7 @@
 				TargetAttributes = {
 					8A522FE31C22684700D1877A = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = CKF73J7D4M;
+						DevelopmentTeam = F4P428X9U6;
 					};
 					8A522FF71C22684800D1877A = {
 						CreatedOnToolsVersion = 7.0;
@@ -345,9 +351,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B96D506E1C2B4DAB00F4CF7E /* userInputViewController.swift in Sources */,
+				8A23DCE21C2FA04800219930 /* DataManager.swift in Sources */,
 				B96D50721C2B7B4A00F4CF7E /* userLocation.swift in Sources */,
 				B9A129BC1C2A400C005A7485 /* ViewController.swift in Sources */,
 				8A522FE81C22684800D1877A /* AppDelegate.swift in Sources */,
+				8A23DCE41C2FA16D00219930 /* SwiftyJSON1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +500,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheheheheheh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WW.kel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -507,7 +515,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TheOtherSide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WW.hheheheheheheh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WW.kel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
