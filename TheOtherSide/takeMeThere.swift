@@ -12,6 +12,9 @@ class takeMeThere: UIViewController {
     
     @IBOutlet weak var searchImage: UIImageView!
         
+    @IBOutlet weak var oppCity: UILabel!
+    
+    @IBOutlet weak var cityDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         func load_image(urlString:String)
@@ -37,16 +40,24 @@ class takeMeThere: UIViewController {
             
             task.resume()
         }
-        
+        //Update the "City" label on the Take Me There page
+        oppCity.text = MyVariables.oppCity
         //Try and get the title of the page
         DataManager.getTopAppsDataFromCSE { (SearchData) -> Void in
             let json = JSON(data: SearchData)
-            if let title = json["items"][0]["title"].string {
+            /*if let title = json["items"][0]["title"].string {
                 print("NSURLSession: \(title)")
-            }
+            }*/
+            //load the image from the json
             if let imageURL = json["items"][0]["pagemap"]["cse_image"][0]["src"].string
             {
                 load_image(imageURL)
+            }
+            //load a description of the place from the json
+            if let description = json["items"][0]["snippet"].string
+            {
+                print(description)
+                self.cityDescription.text = description
             }
         }
         

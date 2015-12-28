@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -273,15 +273,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YSf-4N-mBZ" userLabel="CityView">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="150" y="97" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.0" green="0.87450987100601196" blue="0.77647066116333008" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="L4u-lX-cX7"/>
                                     <constraint firstAttribute="height" constant="300" id="gMG-YM-HfB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityThing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-Ic-CX2">
-                                <rect key="frame" x="150" y="81" width="300" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT IS THIS PLACE?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iAK-2c-os8">
+                                <rect key="frame" x="150" y="417" width="300" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ile-n7-Qeb"/>
+                                    <constraint firstAttribute="height" constant="160" id="mRF-NA-BSJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE OPPOSITE SIDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-Ic-CX2">
+                                <rect key="frame" x="150" y="28" width="300" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="OoD-Qw-5Hc"/>
                                     <constraint firstAttribute="width" constant="300" id="VlM-Yy-dsa"/>
@@ -293,13 +303,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YSf-4N-mBZ" firstAttribute="centerY" secondItem="5RP-Mr-uNo" secondAttribute="centerY" id="H90-ia-TCm"/>
+                            <constraint firstItem="X1b-Ic-CX2" firstAttribute="top" secondItem="QBL-zQ-DHA" secondAttribute="bottom" constant="8" id="0PT-H4-SpY"/>
                             <constraint firstItem="YSf-4N-mBZ" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="INX-7s-3gg"/>
                             <constraint firstItem="YSf-4N-mBZ" firstAttribute="top" secondItem="X1b-Ic-CX2" secondAttribute="bottom" constant="27" id="KDZ-43-ag4"/>
                             <constraint firstItem="X1b-Ic-CX2" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="Mx8-Or-L7J"/>
+                            <constraint firstItem="iAK-2c-os8" firstAttribute="top" secondItem="YSf-4N-mBZ" secondAttribute="bottom" constant="20" id="URJ-S9-TnT"/>
+                            <constraint firstItem="iAK-2c-os8" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="q8z-qw-vei"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityDescription" destination="iAK-2c-os8" id="22F-nI-ONy"/>
+                        <outlet property="oppCity" destination="X1b-Ic-CX2" id="FKg-te-dlO"/>
                         <outlet property="searchImage" destination="YSf-4N-mBZ" id="pDE-qg-YAI"/>
                     </connections>
                 </viewController>
@@ -343,7 +357,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-a1-kgc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-a1-kgc">
                                         <rect key="frame" x="30" y="76" width="140" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="jjl-Fx-MyD"/>

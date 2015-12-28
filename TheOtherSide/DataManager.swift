@@ -8,7 +8,8 @@
 
 import Foundation
 
-let GoogleSearchURL = "https://www.googleapis.com/customsearch/v1?q=tokyo&key=AIzaSyArw5o2-7FeUrTPhDHoNvEhLc1pb3G26cs&cx=005988043632614451431:jhb645ctk_c"
+//let GoogleSearchURL = "https://www.googleapis.com/customsearch/v1?q=tokyo&key=AIzaSyArw5o2-7FeUrTPhDHoNvEhLc1pb3G26cs&cx=005988043632614451431:jhb645ctk_c"
+let CitySearchURL = "https://www.googleapis.com/customsearch/v1?q=" + MyVariables.oppCity + "&key=AIzaSyArw5o2-7FeUrTPhDHoNvEhLc1pb3G26cs&cx=005988043632614451431:jhb645ctk_c"
 
 class DataManager {
     class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
@@ -33,7 +34,7 @@ class DataManager {
     
     class func getTopAppsDataFromCSE(success: ((SearchData: NSData!) -> Void)) {
         //1
-        loadDataFromURL(NSURL(string: GoogleSearchURL)!, completion:{(data, error) -> Void in
+        loadDataFromURL(NSURL(string: CitySearchURL)!, completion:{(data, error) -> Void in
             //2
             if let urlData = data {
                 //3

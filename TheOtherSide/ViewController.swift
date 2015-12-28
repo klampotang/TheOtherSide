@@ -11,6 +11,11 @@ import GoogleMaps
 var oppLat = 0.0
 var oppLong = 0.0
 
+//create a global-like variable for the opposite city
+struct MyVariables {
+   static var oppCity = "SomeString"
+}
+
 class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate
 
  {
@@ -85,10 +90,14 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
                         
                         print("Opposite is the ocean!")
                         self.opploc.text = "Opposite is ocean"
+                        MyVariables.oppCity = "ocean"
+                        //print("My Variables: " + MyVariables.oppCity)
                     }
                     else {
                         print(pm.locality)
+                        MyVariables.oppCity = pm.locality!
                         self.opploc.text = pm.locality
+                        //print("My Variables: " + MyVariables.oppCity)
                     }
                     
                 }
