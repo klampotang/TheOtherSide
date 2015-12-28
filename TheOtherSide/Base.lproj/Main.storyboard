@@ -263,9 +263,7 @@
         <!--TakeMeThere-->
         <scene sceneID="djf-22-Zje">
             <objects>
-
                 <viewController id="BaW-98-9gq" userLabel="TakeMeThere" customClass="takeMeThere" customModule="TheOtherSide" sceneMemberID="viewController">
->>>>>>> 6b867da44684c5dd32de4f0f9df6a5f8241673b0
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QBL-zQ-DHA"/>
                         <viewControllerLayoutGuide type="bottom" id="LuY-B6-1Ge"/>
@@ -474,7 +472,7 @@
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nyq-yh-gW9"/>
         <segue reference="tlB-jd-moz"/>
+        <segue reference="Nyq-yh-gW9"/>
     </inferredMetricsTieBreakers>
 </document>
