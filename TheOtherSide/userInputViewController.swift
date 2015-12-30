@@ -17,6 +17,20 @@ class userInputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var done: UIButton!
     
+    @IBOutlet weak var back: UIButton!
+    
+    @IBAction func back(sender: UIButton) {
+         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject!) {
+        if segue.identifier == "user" {
+            let DestViewController : userLocation = (segue.destinationViewController as? userLocation)!
+                DestViewController.lat = Double(userLat.text!)!
+                DestViewController.long = Double(userLong.text!)!
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,15 +39,6 @@ class userInputViewController: UIViewController, UITextFieldDelegate {
         self.userLong.delegate = self;
     
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject!) {
-        let DestViewController : userLocation = segue.destinationViewController as! userLocation
-        
-        DestViewController.lat = Double(userLat.text!)!
-        DestViewController.long = Double(userLong.text!)!
-        
-    }
-   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
