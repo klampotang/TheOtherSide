@@ -95,7 +95,21 @@ class ViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDele
                     }
                     else {
                         print(pm.locality)
-                        MyVariables.oppCity = pm.locality!
+                        
+                        let stringCity = pm.locality!
+                        var stringFormatted = ""
+                        let chars = stringCity.characters
+                        for i in chars {
+                            if(i == " ") {
+                                stringFormatted+="%20"
+                            }
+                            else
+                            {
+                                stringFormatted+=String(i)
+                            }
+                            
+                        }
+                        MyVariables.oppCity = stringFormatted
                         self.opploc.text = pm.locality
                         //print("My Variables: " + MyVariables.oppCity)
                     }

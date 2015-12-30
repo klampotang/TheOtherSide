@@ -78,7 +78,20 @@ class userLocation: UIViewController
                 else {
                     print(pm.locality)
                     //store the opposite city in a a global variable
-                    EnterLocVariables.enterOppCity = pm.locality!
+                    let stringCity = pm.locality!
+                    var stringFormatted = ""
+                    let chars = stringCity.characters
+                    for i in chars {
+                        if(i == " ") {
+                            stringFormatted+="%20"
+                        }
+                        else
+                        {
+                            stringFormatted+=String(i)
+                        }
+                        
+                    }
+                    EnterLocVariables.enterOppCity = stringFormatted
                     //edit the labels
                     self.oppCity.text = pm.locality
                     self.oppState.text = pm.administrativeArea
