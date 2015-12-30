@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zZ2-cT-WjC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -359,7 +359,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-a1-kgc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-a1-kgc">
                                         <rect key="frame" x="30" y="76" width="140" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="jjl-Fx-MyD"/>
@@ -392,6 +392,7 @@
                                 <state key="normal" title="Take me to the other side"/>
                                 <connections>
                                     <action selector="findOppLoc:" destination="arz-Jl-7TN" eventType="touchUpInside" id="d6F-iJ-x0I"/>
+                                    <segue destination="CyR-Cl-jjh" kind="presentation" id="oaD-dZ-n3C"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77S-zC-evy">
@@ -478,6 +479,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ox3-iB-z7k" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="568" y="-11"/>
+        </scene>
+        <!--Take Me There2-->
+        <scene sceneID="9As-cM-LXv">
+            <objects>
+                <viewController id="CyR-Cl-jjh" customClass="TakeMeThere2" customModule="TheOtherSide" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kiq-nd-gHA"/>
+                        <viewControllerLayoutGuide type="bottom" id="loU-oj-uXM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fH-9Q-5Iw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGN-zl-NfH" userLabel="ImageCity">
+                                <rect key="frame" x="150" y="70" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.87450987099999999" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="9PQ-yd-CDw"/>
+                                    <constraint firstAttribute="width" constant="300" id="AxH-vv-4Ed"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Opposite Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-96-QvF" userLabel="CityName">
+                                <rect key="frame" x="225" y="25" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mtb-u3-tzQ"/>
+                                    <constraint firstAttribute="width" constant="150" id="o8t-lC-wbG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-JL-Eas">
+                                <rect key="frame" x="150" y="390" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TXF-Fe-KUy"/>
+                                    <constraint firstAttribute="height" constant="150" id="ii9-Hb-drQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XO8-JL-Eas" firstAttribute="top" secondItem="LGN-zl-NfH" secondAttribute="bottom" constant="20" id="7cd-8k-j8d"/>
+                            <constraint firstItem="LGN-zl-NfH" firstAttribute="top" secondItem="Kiq-nd-gHA" secondAttribute="bottom" constant="50" id="If6-pi-xXY"/>
+                            <constraint firstItem="Lz9-96-QvF" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="WCm-0p-sby"/>
+                            <constraint firstItem="LGN-zl-NfH" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="Ydg-bl-g34"/>
+                            <constraint firstItem="XO8-JL-Eas" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="nv1-eD-edN"/>
+                            <constraint firstItem="Lz9-96-QvF" firstAttribute="top" secondItem="Kiq-nd-gHA" secondAttribute="bottom" constant="5" id="y4c-b7-k37"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CityDescription" destination="XO8-JL-Eas" id="NFN-18-vsF"/>
+                        <outlet property="CityImage" destination="LGN-zl-NfH" id="7CQ-J0-z8I"/>
+                        <outlet property="CityTitle" destination="Lz9-96-QvF" id="yFP-zx-4mZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPP-sj-Zus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="14"/>
         </scene>
     </scenes>
     <resources>

@@ -8,7 +8,9 @@
 
 import UIKit
 import GoogleMaps
-
+struct EnterLocVariables{
+    static var enterOppCity = ""
+}
 class userLocation: UIViewController
 {
 
@@ -71,9 +73,13 @@ class userLocation: UIViewController
                     self.oppCity.text = " "
                     self.oppState.text = "Opposite is ocean"
                     self.oppCountry.text = " "
-                }
+                    //store ocean in a a global variable
+                    EnterLocVariables.enterOppCity = "ocean"                }
                 else {
                     print(pm.locality)
+                    //store the opposite city in a a global variable
+                    EnterLocVariables.enterOppCity = pm.locality!
+                    //edit the labels
                     self.oppCity.text = pm.locality
                     self.oppState.text = pm.administrativeArea
                     self.oppCountry.text = pm.country
