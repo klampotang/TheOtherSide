@@ -244,12 +244,12 @@
                                         <rect key="frame" x="5" y="1" width="167" height="47"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-GQ-4hg" userLabel="TakeMe">
-                                        <rect key="frame" x="255" y="120" width="70" height="70"/>
+                                        <rect key="frame" x="255" y="115" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="AbN-2K-Lul"/>
                                             <constraint firstAttribute="height" constant="70" id="eG1-kI-XTX"/>
                                         </constraints>
-                                        <state key="normal" image="TakeMe">
+                                        <state key="normal" image="TakeMe2">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -259,7 +259,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.62745100259780884" green="0.92549026012420654" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="YuE-GQ-4hg" secondAttribute="bottom" id="7Nh-rU-QVr"/>
+                                    <constraint firstAttribute="bottom" secondItem="YuE-GQ-4hg" secondAttribute="bottom" constant="5" id="7Nh-rU-QVr"/>
                                     <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerX" secondItem="LjP-jG-egS" secondAttribute="centerX" id="8eg-p1-0ln"/>
                                     <constraint firstAttribute="width" constant="330" id="AWK-Ek-jYq"/>
                                     <constraint firstItem="Q9w-Uo-Nm5" firstAttribute="leading" secondItem="LjP-jG-egS" secondAttribute="leading" constant="5" id="EnA-IK-fY3"/>
@@ -593,13 +593,12 @@
         <image name="EnterLocPrompt" width="255" height="53"/>
         <image name="LocateMe" width="100" height="50"/>
         <image name="OpposteLocation" width="167" height="47"/>
-        <image name="TakeMe" width="50" height="50"/>
         <image name="TakeMe2" width="250" height="250"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tlB-jd-moz"/>
-        <segue reference="Nyq-yh-gW9"/>
+        <segue reference="u6w-0w-KEl"/>
     </inferredMetricsTieBreakers>
 </document>
