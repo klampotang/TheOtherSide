@@ -200,10 +200,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjP-jG-egS">
-                                <rect key="frame" x="135" y="405" width="330" height="150"/>
+                                <rect key="frame" x="135" y="390" width="330" height="190"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opposite location:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPU-Ed-YsA">
-                                        <rect key="frame" x="60" y="65" width="210" height="21"/>
+                                        <rect key="frame" x="60" y="85" width="210" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="210" id="1sg-dh-Mam"/>
                                             <constraint firstAttribute="height" constant="21" id="EZ7-FR-qKK"/>
@@ -212,29 +212,30 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-GQ-4hg">
-                                        <rect key="frame" x="255" y="115" width="70" height="30"/>
-                                        <color key="backgroundColor" red="0.69587018241632814" green="0.84715357424374715" blue="0.9317787247474747" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpposteLocation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-Uo-Nm5">
+                                        <rect key="frame" x="5" y="1" width="167" height="47"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-GQ-4hg" userLabel="TakeMe">
+                                        <rect key="frame" x="255" y="120" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="AbN-2K-Lul"/>
-                                            <constraint firstAttribute="height" constant="30" id="eG1-kI-XTX"/>
+                                            <constraint firstAttribute="height" constant="70" id="eG1-kI-XTX"/>
                                         </constraints>
-                                        <state key="normal" title="Take Me"/>
+                                        <state key="normal" image="TakeMe">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="BaW-98-9gq" kind="presentation" id="HiF-Gn-gTd"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpposteLocation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-Uo-Nm5">
-                                        <rect key="frame" x="5" y="1" width="167" height="47"/>
-                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.69587018239999998" green="0.84715357420000004" blue="0.93177872470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.62745100259780884" green="0.92549026012420654" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="YuE-GQ-4hg" secondAttribute="bottom" constant="5" id="7Nh-rU-QVr"/>
+                                    <constraint firstAttribute="bottom" secondItem="YuE-GQ-4hg" secondAttribute="bottom" id="7Nh-rU-QVr"/>
                                     <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerX" secondItem="LjP-jG-egS" secondAttribute="centerX" id="8eg-p1-0ln"/>
                                     <constraint firstAttribute="width" constant="330" id="AWK-Ek-jYq"/>
                                     <constraint firstItem="Q9w-Uo-Nm5" firstAttribute="leading" secondItem="LjP-jG-egS" secondAttribute="leading" constant="5" id="EnA-IK-fY3"/>
-                                    <constraint firstAttribute="height" constant="150" id="HlV-zm-BOx"/>
+                                    <constraint firstAttribute="height" constant="190" id="HlV-zm-BOx"/>
                                     <constraint firstAttribute="trailing" secondItem="YuE-GQ-4hg" secondAttribute="trailing" constant="5" id="W1Q-v2-vGM"/>
                                     <constraint firstItem="rPU-Ed-YsA" firstAttribute="centerY" secondItem="LjP-jG-egS" secondAttribute="centerY" id="WFb-AZ-GVp"/>
                                     <constraint firstItem="Q9w-Uo-Nm5" firstAttribute="top" secondItem="LjP-jG-egS" secondAttribute="top" constant="1" id="vcj-6h-fI3"/>
@@ -260,7 +261,7 @@
                             <constraint firstItem="59T-Rw-X9H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="XDb-aG-3AN"/>
                             <constraint firstItem="nai-gs-jhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="f8g-yc-QJu"/>
                             <constraint firstItem="59T-Rw-X9H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCk-s7-gQ8"/>
-                            <constraint firstItem="LjP-jG-egS" firstAttribute="top" secondItem="dTb-X8-FID" secondAttribute="bottom" constant="15" id="qw8-Pb-cI7"/>
+                            <constraint firstItem="LjP-jG-egS" firstAttribute="top" secondItem="dTb-X8-FID" secondAttribute="bottom" id="qw8-Pb-cI7"/>
                             <constraint firstItem="dTb-X8-FID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZm-IB-yAR"/>
                         </constraints>
                     </view>
@@ -563,6 +564,7 @@
         <image name="EnterLocButton" width="306" height="396"/>
         <image name="LocateMe" width="100" height="50"/>
         <image name="OpposteLocation" width="167" height="47"/>
+        <image name="TakeMe" width="50" height="50"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
