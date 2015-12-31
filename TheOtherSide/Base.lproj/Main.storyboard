@@ -87,39 +87,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-uI-HEj" userLabel="userText">
-                                <rect key="frame" x="135" y="175" width="97" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.079419953942946098" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-e2-mLG">
-                                <rect key="frame" x="147" y="255" width="97" height="30"/>
-                                <color key="backgroundColor" red="0.15083945276644828" green="1" blue="0.28153224207849015" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPK-8o-HtM">
-                                <rect key="frame" x="192" y="344" width="46" height="30"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="arz-Jl-7TN" kind="presentation" identifier="user" id="cMa-Mi-8c5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-IW-c7e">
-                                <rect key="frame" x="178" y="123" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-IW-c7e">
+                                <rect key="frame" x="20" y="25" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mgr-Ch-NAG"/>
+                                    <constraint firstAttribute="width" constant="35" id="rEJ-qO-P1A"/>
+                                </constraints>
+                                <state key="normal" image="BackButton"/>
                                 <connections>
                                     <action selector="back:" destination="Kdx-kc-GzV" eventType="touchUpInside" id="It8-vj-r6Q"/>
                                     <segue destination="zZ2-cT-WjC" kind="modal" id="Nyq-yh-gW9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GC-o1-Q5B">
+                                <rect key="frame" x="135" y="70" width="330" height="500"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-e2-mLG">
+                                        <rect key="frame" x="122" y="155" width="86" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-uI-HEj" userLabel="userText">
+                                        <rect key="frame" x="128" y="115" width="74" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EnterLocPrompt" translatesAutoresizingMaskIntoConstraints="NO" id="y7S-FC-16P">
+                                        <rect key="frame" x="38" y="0.0" width="255" height="53"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TakeMe2" translatesAutoresizingMaskIntoConstraints="NO" id="6YA-oI-ifC">
+                                        <rect key="frame" x="55" y="205" width="220" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="Nmf-pZ-V8s"/>
+                                            <constraint firstAttribute="height" constant="108" id="mvh-Jc-gKy"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69587018239999998" green="0.84715357420000004" blue="0.93177872470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6YA-oI-ifC" firstAttribute="centerX" secondItem="6GC-o1-Q5B" secondAttribute="centerX" id="AGd-Pi-Gxb"/>
+                                    <constraint firstItem="y7S-FC-16P" firstAttribute="top" secondItem="6GC-o1-Q5B" secondAttribute="top" id="RAR-kL-jEM"/>
+                                    <constraint firstItem="GWv-uI-HEj" firstAttribute="top" secondItem="6GC-o1-Q5B" secondAttribute="top" constant="115" id="UL2-k9-IxH"/>
+                                    <constraint firstItem="9Ef-e2-mLG" firstAttribute="centerX" secondItem="6GC-o1-Q5B" secondAttribute="centerX" id="Z55-sq-t1g"/>
+                                    <constraint firstItem="GWv-uI-HEj" firstAttribute="centerX" secondItem="6GC-o1-Q5B" secondAttribute="centerX" id="fxf-iD-4Gp"/>
+                                    <constraint firstItem="y7S-FC-16P" firstAttribute="centerX" secondItem="6GC-o1-Q5B" secondAttribute="centerX" id="kQR-dl-Zai"/>
+                                    <constraint firstItem="9Ef-e2-mLG" firstAttribute="top" secondItem="GWv-uI-HEj" secondAttribute="bottom" constant="10" id="m8i-DC-NvQ"/>
+                                    <constraint firstItem="6YA-oI-ifC" firstAttribute="top" secondItem="9Ef-e2-mLG" secondAttribute="bottom" constant="20" id="ph0-Id-P6n"/>
+                                    <constraint firstAttribute="width" constant="330" id="rao-gM-GI2"/>
+                                    <constraint firstAttribute="height" constant="500" id="yB4-Rt-Uim"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6GC-o1-Q5B" firstAttribute="top" secondItem="GG3-pg-ihJ" secondAttribute="bottom" constant="50" id="0jL-JY-yTR"/>
+                            <constraint firstItem="6GC-o1-Q5B" firstAttribute="centerX" secondItem="vTH-B2-mkI" secondAttribute="centerX" id="14p-nL-XsZ"/>
+                            <constraint firstItem="JXe-IW-c7e" firstAttribute="top" secondItem="GG3-pg-ihJ" secondAttribute="bottom" constant="5" id="KDh-xj-8h4"/>
+                            <constraint firstItem="JXe-IW-c7e" firstAttribute="leading" secondItem="vTH-B2-mkI" secondAttribute="leadingMargin" id="Wh9-do-TD0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="JXe-IW-c7e" id="smt-2v-GGR"/>
-                        <outlet property="done" destination="SPK-8o-HtM" id="wyh-Fb-32Q"/>
                         <outlet property="userLat" destination="GWv-uI-HEj" id="cRg-Dy-thW"/>
                         <outlet property="userLong" destination="9Ef-e2-mLG" id="lHZ-dw-Fcl"/>
                     </connections>
@@ -562,14 +590,16 @@
         <image name="CurrLoc" width="250" height="225"/>
         <image name="CurrLocButton" width="306" height="396"/>
         <image name="EnterLocButton" width="306" height="396"/>
+        <image name="EnterLocPrompt" width="255" height="53"/>
         <image name="LocateMe" width="100" height="50"/>
         <image name="OpposteLocation" width="167" height="47"/>
         <image name="TakeMe" width="50" height="50"/>
+        <image name="TakeMe2" width="250" height="250"/>
         <image name="TheOtherSideText" width="306" height="396"/>
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tlB-jd-moz"/>
-        <segue reference="u6w-0w-KEl"/>
+        <segue reference="Nyq-yh-gW9"/>
     </inferredMetricsTieBreakers>
 </document>
