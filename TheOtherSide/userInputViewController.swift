@@ -15,7 +15,7 @@ class userInputViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userLong: UITextField!
     
-    @IBOutlet weak var done: UIButton!
+    @IBOutlet weak var takeme: UIButton!
     
     @IBOutlet weak var back: UIButton!
     
