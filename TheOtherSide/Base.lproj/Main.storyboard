@@ -318,7 +318,7 @@
                         <viewControllerLayoutGuide type="top" id="QBL-zQ-DHA"/>
                         <viewControllerLayoutGuide type="bottom" id="LuY-B6-1Ge"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5RP-Mr-uNo">
+                    <view key="view" contentMode="scaleAspectFit" id="5RP-Mr-uNo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -350,6 +350,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5v-a6-Y0O" userLabel="BackButton">
+                                <rect key="frame" x="20" y="30" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ics-pY-rxZ"/>
+                                    <constraint firstAttribute="width" constant="46" id="K7O-jB-eOr"/>
+                                </constraints>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="HOc-28-QKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-hM-c5q" userLabel="HomeButton">
+                                <rect key="frame" x="534" y="20" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Iqt-T6-T2c"/>
+                                    <constraint firstAttribute="width" constant="46" id="lhR-Ra-9wG"/>
+                                </constraints>
+                                <state key="normal" image="Home"/>
+                                <connections>
+                                    <segue destination="zZ2-cT-WjC" kind="modal" id="Cog-im-HM2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -357,7 +379,11 @@
                             <constraint firstItem="YSf-4N-mBZ" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="INX-7s-3gg"/>
                             <constraint firstItem="YSf-4N-mBZ" firstAttribute="top" secondItem="X1b-Ic-CX2" secondAttribute="bottom" constant="27" id="KDZ-43-ag4"/>
                             <constraint firstItem="X1b-Ic-CX2" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="Mx8-Or-L7J"/>
+                            <constraint firstItem="n5v-a6-Y0O" firstAttribute="top" secondItem="5RP-Mr-uNo" secondAttribute="topMargin" constant="30" id="Qyf-se-gOm"/>
+                            <constraint firstItem="iUt-hM-c5q" firstAttribute="top" secondItem="QBL-zQ-DHA" secondAttribute="bottom" id="RjJ-xY-qef"/>
                             <constraint firstItem="iAK-2c-os8" firstAttribute="top" secondItem="YSf-4N-mBZ" secondAttribute="bottom" constant="20" id="URJ-S9-TnT"/>
+                            <constraint firstItem="n5v-a6-Y0O" firstAttribute="leading" secondItem="5RP-Mr-uNo" secondAttribute="leadingMargin" id="ggF-rd-fWv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iUt-hM-c5q" secondAttribute="trailing" id="nCl-nm-qOf"/>
                             <constraint firstItem="iAK-2c-os8" firstAttribute="centerX" secondItem="5RP-Mr-uNo" secondAttribute="centerX" id="q8z-qw-vei"/>
                         </constraints>
                     </view>
@@ -369,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFs-pu-pFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="740"/>
+            <point key="canvasLocation" x="761" y="758"/>
         </scene>
         <!--Current Location2 -->
         <scene sceneID="EHb-5x-tvf">
@@ -557,7 +583,7 @@
                                     <constraint firstAttribute="width" constant="300" id="AxH-vv-4Ed"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading City Name..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-96-QvF" userLabel="CityName">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading City Name..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-96-QvF" userLabel="CityName">
                                 <rect key="frame" x="200" y="25" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mtb-u3-tzQ"/>
@@ -577,23 +603,41 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-gb-SZw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-gb-SZw" userLabel="BackButton">
                                 <rect key="frame" x="20" y="17" width="38" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="hiX-xY-6h7"/>
+                                    <constraint firstAttribute="height" constant="37" id="nVt-X3-5wh"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="BackButton"/>
+                                <connections>
+                                    <segue destination="Kdx-kc-GzV" kind="modal" id="GXG-rp-hOg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Biq-Ew-EJB" userLabel="HomeButton">
+                                <rect key="frame" x="540" y="18" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="29R-lf-09A"/>
+                                    <constraint firstAttribute="height" constant="40" id="AiR-gg-l75"/>
+                                </constraints>
+                                <state key="normal" image="Home"/>
+                                <connections>
+                                    <segue destination="zZ2-cT-WjC" kind="modal" id="EsJ-aY-L4d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ngc-gb-SZw" firstAttribute="top" secondItem="1fH-9Q-5Iw" secondAttribute="topMargin" constant="17" id="2fs-jT-a7i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Biq-Ew-EJB" secondAttribute="trailing" id="5ps-hD-xRz"/>
                             <constraint firstItem="XO8-JL-Eas" firstAttribute="top" secondItem="LGN-zl-NfH" secondAttribute="bottom" constant="20" id="7cd-8k-j8d"/>
-                            <constraint firstItem="loU-oj-uXM" firstAttribute="top" secondItem="Ngc-gb-SZw" secondAttribute="bottom" constant="546" id="CXF-fm-MOb"/>
                             <constraint firstItem="LGN-zl-NfH" firstAttribute="top" secondItem="Kiq-nd-gHA" secondAttribute="bottom" constant="50" id="If6-pi-xXY"/>
                             <constraint firstItem="Ngc-gb-SZw" firstAttribute="leading" secondItem="1fH-9Q-5Iw" secondAttribute="leadingMargin" id="KNE-AH-vC0"/>
                             <constraint firstItem="Lz9-96-QvF" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="WCm-0p-sby"/>
                             <constraint firstItem="LGN-zl-NfH" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="Ydg-bl-g34"/>
-                            <constraint firstItem="Lz9-96-QvF" firstAttribute="leading" secondItem="Ngc-gb-SZw" secondAttribute="trailing" constant="142" id="fwJ-jv-1Br"/>
                             <constraint firstItem="XO8-JL-Eas" firstAttribute="centerX" secondItem="1fH-9Q-5Iw" secondAttribute="centerX" id="nv1-eD-edN"/>
                             <constraint firstItem="Lz9-96-QvF" firstAttribute="top" secondItem="Kiq-nd-gHA" secondAttribute="bottom" constant="5" id="y4c-b7-k37"/>
+                            <constraint firstItem="Biq-Ew-EJB" firstAttribute="top" secondItem="1fH-9Q-5Iw" secondAttribute="topMargin" constant="18" id="yvA-3i-wgf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -613,6 +657,7 @@
         <image name="CurrLocButton" width="306" height="396"/>
         <image name="EnterLocButton" width="306" height="396"/>
         <image name="EnterLocPrompt" width="255" height="53"/>
+        <image name="Home" width="58" height="55"/>
         <image name="LocateMe" width="100" height="50"/>
         <image name="OpposteLocation" width="167" height="47"/>
         <image name="TakeMe2" width="250" height="250"/>
@@ -620,7 +665,8 @@
         <image name="bg" width="2434" height="3626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u6w-0w-KEl"/>
-        <segue reference="tlB-jd-moz"/>
+        <segue reference="f6L-sS-na5"/>
+        <segue reference="EsJ-aY-L4d"/>
+        <segue reference="GXG-rp-hOg"/>
     </inferredMetricsTieBreakers>
 </document>
