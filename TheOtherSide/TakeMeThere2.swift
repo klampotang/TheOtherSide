@@ -14,6 +14,12 @@ class TakeMeThere2: UIViewController {
     @IBOutlet weak var CityImage: UIImageView!
     @IBOutlet weak var CityTitle: UILabel!
     
+    @IBAction func morepics(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"http://www.shutterstock.com/cat.mhtml?autocomplete_id=&language=en&lang=en&search_source=&safesearch=1&version=llv1&searchterm=" + EnterLocVariables.enterOppCity + "&media_type=images")!)
+    }
+    @IBAction func moreinfo(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://en.wikipedia.org/wiki/" + EnterLocVariables.enterOppCity)!)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //Load the image of the description

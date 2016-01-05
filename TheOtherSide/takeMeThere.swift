@@ -14,6 +14,14 @@ class takeMeThere: UIViewController {
         
     @IBOutlet weak var oppCity: UILabel!
     
+    @IBAction func openLink(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"http://www.shutterstock.com/cat.mhtml?autocomplete_id=&language=en&lang=en&search_source=&safesearch=1&version=llv1&searchterm=" + MyVariables.oppCity + "&media_type=images")!)
+    }
+
+    @IBAction func openInfo(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://en.wikipedia.org/wiki/" + MyVariables.oppCity)!)
+        
+    }
     @IBOutlet weak var cityDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
